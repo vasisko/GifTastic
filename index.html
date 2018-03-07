@@ -11,13 +11,15 @@
 
      <!--<link rel="stylesheet" href=".assets/css/reset.css">-->
  
-     <!--Link to stylesheet
-     <link rel="stylesheet" href="./assets/css/style.css">-->
-    <title>GifTastic: </title>
+     <!--Link to stylesheet-->
+     <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>GifTastic: GIF in a Jif </title>
 
    
 </head>
 <body>
+
+    <!--Page header using jumbotron -->
     <header>
         <div class="jumbotron jumbotron-fluid mb-0">
                 <div class="container">
@@ -27,33 +29,45 @@
         </div>
     </header>
 
+<!--Container/row/col for page content-->
+<div class="container">
+  <div class="row">
+    <div class="col justify-content-center">
+
     <!-- Buttons for topics created/displayed here-->
     <div id="topic-buttons">buttons go here</div>
 
     <!-- Add new button form-->
     <div id="addButton">
         
+        <!-- Form for user to enter in topic for new button-->
         <form class="form-inline mt-2">
             <label class="pr-3" for="inlineFormInputName2">Add a button:</label>
             
             <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Smiling">
-
             
             <button type="submit" id="addTopic" class="btn btn-secondary mb-2">Submit</button>
         </form>
     </div>
-
-
+    <!-- End of form -->
     
-<!--BOOTSTRAP CARD-->
-<div id="giphy-display">
-    <!--<div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text">Rating goes here</p>
-        </div>
-      </div>-->
-</div>
+    <!--BOOTSTRAP CARD-->
+    <!-- Giphys to be displayed here dynamically in this div-->
+    <div id="giphy-display">
+          <!--BOOTSTRAP CARD syntax: 
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Rating goes here</p>
+                </div>
+            </div>-->
+    </div>
+
+    </div><!--end of col-->
+  </div><!--end of row-->
+</div><!--end of container-->
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="./assets/javascript/app.js"></script> 
 

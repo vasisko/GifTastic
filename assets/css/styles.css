@@ -1,0 +1,28 @@
+.jumbotron {
+    background-image: url("../images/brickwall_@2X.png");
+}
+#topic-buttons{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.container{
+    justify-content: center;
+}
+header {
+    border-bottom: coral 3px solid;
+}
+.form-control{
+    border-color:coral;
+    color: #ccc;
+}
+
+#addButton{
+    margin-bottom:2rem;
+}
+.btn-secondary {
+    background-color: coral;
+    border-color:red;
+}
+.pr-3 {
+    vertical-align: middle;
+}
