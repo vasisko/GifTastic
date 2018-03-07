@@ -36,7 +36,19 @@ $(document).on('click', '.gtopic',function(){
     getYerImgs();
 })
 
+$(document).on('click', '.giphy', function(){
 
+    var state=$(this).attr("data-state");
+    console.log(state);
+    //change state of image from still to animate
+    if (state === "still"){
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+    } else{
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+    }
+});
 //API Info:
 //  Giphy API key:  AawRiCsMDzpjKTtiI0LQ0pEmQ1bw7kLd
 
@@ -48,13 +60,14 @@ $(document).on('click', '.gtopic',function(){
 function getYerImgs(){
     console.log('newGiphy: ' + newGiphy);
     var apiKey= "AawRiCsMDzpjKTtiI0LQ0pEmQ1bw7kLd";
-    var queryURL= "https://api.giphy.com/v1/gifs/search?q=" + newGiphy + "&rating=g&rating=pg&api_key=" + apiKey + "&limit=10"
+    var queryURL= "https://api.giphy.com/v1/gifs/search?q=" + newGiphy + "&rating=g&rating=pg&api_key=" + apiKey + "&limit=10";
 
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function(response){
         
+        $('#giphy-display').empty();
 
         //  Receive/process returned Giphy data
         var results = response.data; 
