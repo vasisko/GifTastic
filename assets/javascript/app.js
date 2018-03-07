@@ -7,9 +7,26 @@ var newGiphy="";
 // create array of topics
     var topics = ['good morning', 'coffee', 'eye roll','crying','laughing', 'chocolate', 'running',];
 
+$('#addTopic').on('click', function(event){
+
+    event.preventDefault();
+    
+    var newTopic=$('#inlineFormInputName2').val().trim();
+    
+    console.log(newTopic);
+    topics.push(newTopic);
+    displayButtons();
+});
+
+
+
+
+
+
 // Function:  displayButtons
 //add buttons to page dynamically:  loop through array creating a button for each element in array
 function displayButtons() {
+
 
     // clear out old buttons and replace with current
     $('#topic-buttons').empty();

@@ -18,10 +18,33 @@
    
 </head>
 <body>
-    
-<!-- Buttons for topics created/displayed here-->
-<div id="topic-buttons">buttons go here</div>
+    <header>
+        <div class="jumbotron jumbotron-fluid mb-0">
+                <div class="container">
+                  <h1 class="display-4">Gif in a Jif:</h1>
+                  <p class="lead">Animated gif's for life's daily motions</p>
+                </div>
+        </div>
+    </header>
 
+    <!-- Buttons for topics created/displayed here-->
+    <div id="topic-buttons">buttons go here</div>
+
+    <!-- Add new button form-->
+    <div id="addButton">
+        
+        <form class="form-inline mt-2">
+            <label class="pr-3" for="inlineFormInputName2">Add a button:</label>
+            
+            <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Smiling">
+
+            
+            <button type="submit" id="addTopic" class="btn btn-secondary mb-2">Submit</button>
+        </form>
+    </div>
+
+
+    
 <!--BOOTSTRAP CARD-->
 <div id="giphy-display">
     <!--<div class="card" style="width: 18rem;">
@@ -30,8 +53,7 @@
           <p class="card-text">Rating goes here</p>
         </div>
       </div>-->
-</div>-->
-
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="./assets/javascript/app.js"></script> 
 
