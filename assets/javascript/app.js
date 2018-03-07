@@ -48,7 +48,7 @@ $(document).on('click', '.gtopic',function(){
 function getYerImgs(){
     console.log('newGiphy: ' + newGiphy);
     var apiKey= "AawRiCsMDzpjKTtiI0LQ0pEmQ1bw7kLd";
-    var queryURL= "https://api.giphy.com/v1/gifs/search?q=" + newGiphy + "&api_key=" + apiKey + "&limit=10"
+    var queryURL= "https://api.giphy.com/v1/gifs/search?q=" + newGiphy + "&rating=g&rating=pg&api_key=" + apiKey + "&limit=10"
 
     $.ajax({
         url: queryURL,
@@ -58,14 +58,14 @@ function getYerImgs(){
 
         //  Receive/process returned Giphy data
         var results = response.data; 
-        console.log(results);
     
+        //  Create HTML for each image returned 
         for (var i=0; i<results.length; i++) {
             //Make div tag
             var giphyDiv = 
             $('<div>').addClass('.card giphy-display');
 
-            //Add image to div
+            //Make image tag for div
             var giphyImg = $('<img>');
             // Add attributes for still and animated versions, set state to still
             giphyImg.attr({
@@ -75,10 +75,8 @@ function getYerImgs(){
                 'data-animate': results[i].images.fixed_height.url,
                 class: "giphy",
             });
-
-            var giphyRating = results[i].rating;
-            console.log(giphyRating);
-            console.log(giphyImg);
+            // Make paragraph tag for rating 
+            var giphyRating = $('<p>').text('Rated: ' + results[i].rating);
             
             giphyDiv.append(giphyImg);
             giphyDiv.append(giphyRating);
