@@ -87,7 +87,7 @@ $(document).ready(function(){
         // NEW BUTTON: Add new topics from user input
         $('#addTopic').on('click', function(event){
 
-            // Code to accept ENTER button as submit   
+            // Do not reload page   
             event.preventDefault();
 
             // Get user input from form and omit spaces
