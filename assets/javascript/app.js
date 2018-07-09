@@ -20,12 +20,12 @@ $(document).ready(function(){
         // * append new <button> to <div> containing buttons
         // * add class to button tag using .addClass
         // * add attribute to tag to add data-name = topic 
-            var B = $('<button>');
-            B.addClass('gtopic');
-            B.attr('data-name', topics[i]);
-            B.text(topics[i]);
+            var topicbutton = $('<button>');
+            topicbutton.addClass('giftopic');
+            topicbutton.attr('data-name', topics[i]);
+            topicbutton.text(topics[i]);
 
-            $('#topic-buttons').append(B);
+            $('#topic-buttons').append(topicbutton);
          }
     }
     
@@ -99,7 +99,7 @@ $(document).ready(function(){
         });
 
         // GET GIFs 
-         $(document).on('click', '.gtopic',function(){
+         $(document).on('click', '.giftopic',function(){
 
             newGiphy = $(this).attr('data-name');
     
